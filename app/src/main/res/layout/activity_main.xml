@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#101820"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TAME&amp;LEGE PLAY"
+        android:textColor="#F5F2E9"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.04"
+        android:gravity="center"
+        android:paddingTop="16dp"
+        android:paddingBottom="4dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="KEEP UP. KEEP PLAYING."
+        android:textColor="#D4AF37"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:letterSpacing="0.12"
+        android:paddingBottom="24dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/chooseMediaButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CHOOSE AUDIO OR VIDEO"
+        android:textColor="#101820"
+        android:backgroundTint="#D4AF37"
+        app:cornerRadius="14dp"
+        android:padding="14dp" />
+
+    <TextView
+        android:id="@+id/nowPlayingText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No media selected"
+        android:textColor="#F5F2E9"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:padding="14dp" />
+
+    <androidx.media3.ui.PlayerView
+        android:id="@+id/playerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#080D12"
+        app:use_controller="true"
+        app:show_buffering="when_playing"
+        app:resize_mode="fit" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="16dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/playButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="PLAY"
+            android:textColor="#101820"
+            android:backgroundTint="#D4AF37"
+            app:cornerRadius="12dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/pauseButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="PAUSE"
+            android:textColor="#F5F2E9"
+            android:backgroundTint="#33414D"
+            app:cornerRadius="12dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/stopButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="STOP"
+            android:textColor="#F5F2E9"
+            android:backgroundTint="#33414D"
+            app:cornerRadius="12dp" />
+    </LinearLayout>
+</LinearLayout>
